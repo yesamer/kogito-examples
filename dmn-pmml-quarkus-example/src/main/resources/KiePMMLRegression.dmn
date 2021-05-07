@@ -5,29 +5,6 @@
     <dmn:extensionElements/>
     <dmn:variable id="_27781513-ED23-4E5A-9C8D-8C5CCCCF41B2" name="fld2" typeRef="number"/>
   </dmn:inputData>
-  <dmn:businessKnowledgeModel id="_BB0D3D38-E0DA-4384-A9E1-25DDFFD89C68" name="RegressionModelBKM">
-    <dmn:extensionElements/>
-    <dmn:variable id="_359E98E1-9534-416E-83C3-A8C5AD65AC52" name="RegressionModelBKM"/>
-    <dmn:encapsulatedLogic id="_CCCE713B-D128-4BD7-A02B-4CA98A66533C" kind="PMML">
-      <dmn:formalParameter id="_234C5838-9546-484C-ACB2-3ACAD4656823" name="fld1" typeRef="Any"/>
-      <dmn:formalParameter id="_7F5745D1-DE0A-4DB1-BCA9-E8373E5C3F3A" name="fld2" typeRef="Any"/>
-      <dmn:formalParameter id="_FF36D657-F576-4E20-BAF5-F25413C97C79" name="fld3" typeRef="Any"/>
-      <dmn:context id="_991B62E3-C276-4521-80B1-BBD9C5EA1C1C">
-        <dmn:contextEntry>
-          <dmn:variable id="_832AAA1B-1765-480F-AFC1-C81C5062906B" name="document" typeRef="string"/>
-          <dmn:literalExpression id="_9B105002-44C3-4CBE-BB30-DA08D7348A6A">
-            <dmn:text>"TestRegression"</dmn:text>
-          </dmn:literalExpression>
-        </dmn:contextEntry>
-        <dmn:contextEntry>
-          <dmn:variable id="_7513F2BC-4A96-41DF-813F-647709390DAE" name="model" typeRef="string"/>
-          <dmn:literalExpression id="_BFCECD3D-A60C-4937-8440-4EFC5EFF5973">
-            <dmn:text>"LinReg"</dmn:text>
-          </dmn:literalExpression>
-        </dmn:contextEntry>
-      </dmn:context>
-    </dmn:encapsulatedLogic>
-  </dmn:businessKnowledgeModel>
   <dmn:decision id="_97845D38-0E4C-41D0-9998-0D6B149751F3" name="Decision">
     <dmn:extensionElements/>
     <dmn:variable id="_0B606366-E2BE-422F-8F07-05245DD795D8" name="Decision" typeRef="number"/>
@@ -75,21 +52,33 @@
     <dmn:extensionElements/>
     <dmn:variable id="_BCB5EA59-820E-40BE-8620-D11B92DFE6F1" name="fld3" typeRef="string"/>
   </dmn:inputData>
+  <dmn:businessKnowledgeModel id="_BB0D3D38-E0DA-4384-A9E1-25DDFFD89C68" name="RegressionModelBKM">
+    <dmn:extensionElements/>
+    <dmn:variable id="_359E98E1-9534-416E-83C3-A8C5AD65AC52" name="RegressionModelBKM"/>
+    <dmn:encapsulatedLogic id="_CCCE713B-D128-4BD7-A02B-4CA98A66533C" kind="PMML">
+      <dmn:formalParameter id="_234C5838-9546-484C-ACB2-3ACAD4656823" name="fld1" typeRef="Any"/>
+      <dmn:formalParameter id="_7F5745D1-DE0A-4DB1-BCA9-E8373E5C3F3A" name="fld2" typeRef="Any"/>
+      <dmn:formalParameter id="_FF36D657-F576-4E20-BAF5-F25413C97C79" name="fld3" typeRef="Any"/>
+      <dmn:context id="_991B62E3-C276-4521-80B1-BBD9C5EA1C1C">
+        <dmn:contextEntry>
+          <dmn:variable id="_832AAA1B-1765-480F-AFC1-C81C5062906B" name="document" typeRef="string"/>
+          <dmn:literalExpression id="_9B105002-44C3-4CBE-BB30-DA08D7348A6A">
+            <dmn:text>"TestRegression"</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_7513F2BC-4A96-41DF-813F-647709390DAE" name="model" typeRef="string"/>
+          <dmn:literalExpression id="_BFCECD3D-A60C-4937-8440-4EFC5EFF5973">
+            <dmn:text>"LinReg"</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_0BD028CB-74EE-419D-8008-124074B233A8" name="DRG">
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_991B62E3-C276-4521-80B1-BBD9C5EA1C1C">
-            <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>200</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_9B105002-44C3-4CBE-BB30-DA08D7348A6A"/>
-          <kie:ComponentWidths dmnElementRef="_BFCECD3D-A60C-4937-8440-4EFC5EFF5973"/>
-          <kie:ComponentWidths dmnElementRef="_CCCE713B-D128-4BD7-A02B-4CA98A66533C">
-            <kie:width>50</kie:width>
-            <kie:width>370</kie:width>
-          </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_33828843-45AD-4993-B32A-DADEC37A681D">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
@@ -105,6 +94,17 @@
           <kie:ComponentWidths dmnElementRef="_9C9A6DD0-AC19-4283-B0A4-F3DE0C86B2D3">
             <kie:width>150</kie:width>
           </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_991B62E3-C276-4521-80B1-BBD9C5EA1C1C">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>200</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9B105002-44C3-4CBE-BB30-DA08D7348A6A"/>
+          <kie:ComponentWidths dmnElementRef="_BFCECD3D-A60C-4937-8440-4EFC5EFF5973"/>
+          <kie:ComponentWidths dmnElementRef="_CCCE713B-D128-4BD7-A02B-4CA98A66533C">
+            <kie:width>50</kie:width>
+            <kie:width>370</kie:width>
+          </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-drg-_B330C8AD-E87F-4B09-A3AB-5664E2284B1A" dmnElementRef="_B330C8AD-E87F-4B09-A3AB-5664E2284B1A" isCollapsed="false">
@@ -114,15 +114,6 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="373.29906542056074" y="117" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_BB0D3D38-E0DA-4384-A9E1-25DDFFD89C68" dmnElementRef="_BB0D3D38-E0DA-4384-A9E1-25DDFFD89C68" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="680" y="261" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_97845D38-0E4C-41D0-9998-0D6B149751F3" dmnElementRef="_97845D38-0E4C-41D0-9998-0D6B149751F3" isCollapsed="false">
@@ -150,6 +141,15 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="565" y="117" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_BB0D3D38-E0DA-4384-A9E1-25DDFFD89C68" dmnElementRef="_BB0D3D38-E0DA-4384-A9E1-25DDFFD89C68" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="680" y="261" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_EE5083E2-21EB-4203-AADA-A0B980C6BEE9" dmnElementRef="_EE5083E2-21EB-4203-AADA-A0B980C6BEE9">
