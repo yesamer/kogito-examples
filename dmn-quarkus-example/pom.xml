@@ -9,6 +9,13 @@
   </parent>
   <artifactId>dmn-quarkus-example</artifactId>
   <name>Kogito Example :: DMN</name>
+   
+   <properties>
+        <version.surefire.plugin>2.22.2</version.surefire.plugin>
+        <version.surefire.report.plugin>2.22.2</version.surefire.report.plugin>
+    </properties>
+
+
   <dependencyManagement>
     <dependencies>
       <dependency>
